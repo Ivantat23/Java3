@@ -2,14 +2,21 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        // Объявляете переменные для входных данных и
-        // параметров программы: начального счёта,
-        // суммы пополнения и тп
+        int account = 100; // начальный счет
+        int deposit = 1100; // пополнение счета
 
-        // Условным оператором проверяете, превысила ли
-        // сумма пополнения порог, и для этих двух разных
-        // сценариев рассчитываете сумму бонуса и выводите
-        // на экран.
+        int bonus;
+        System.out.printf("Ваш счет составляет: " + account + "руб.");
+        System.out.println("Вы пополнили счет на: " + deposit + "руб.");
+
+        if (deposit > 999) {
+            bonus = deposit / 100;
+        } else  {
+            bonus = 0;
+        }
+        int balance = deposit + account + bonus;
+        System.out.println("Итоговы счет:" + balance + "руб.");
+        System.out.println("Ваш бонус:" + bonus + "руб.");
 
     }
 }
